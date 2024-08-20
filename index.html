@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <li id="menu-icon" onclick="showSideBar()"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+            viewBox="0 -960 960 960" width="26px" fill="#5f6368">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg></li>
+        <nav class="navbar">
+            <ul>
+                
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li> <a href="#projects">Projects</a></li>
+                <li> <a href="#contact">Contact Me</a></li>
+                <li><a href="NASEERBABA-WEB.pdf" download>Download CV</a></li>
+               
+            </ul>
+            <div class="mob-navbar" id="mob-navbar" style="display: none;">
+               
+                <li onclick="hideSideBar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></li>
+                <a href="#" class="logo">Portfolio</a>
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact Me</a>
+                <a href="NASEERBABA-WEB.pdf" download>Download CV</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="home" id="home" data-aos="zoom-in" data-aos-duration="2000">
+        <div class="home-content">
+            <h3>Hi, Myself</h3>
+            <h1>Naseer Shaik</h1>
+            <h3>And I'm a <span class="auto-type"></span></h3>
+            <p>As a frontend developer, I love crafting responsive, interactive websites that offer great user
+                experiences and top-notch performance. I turn creative ideas into seamless, functional web applications
+                using the latest technologies. My role is all about blending design and functionality to ensure every
+                project looks fantastic and works perfectly.</p>
+            <div class="social-media">
+                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <a href="NASEERBABA-WEB.pdf" download class="btn">Download CV</a>
+        </div>
+    </div>
+
+    <section class="about" id="about" data-aos="fade-left" data-aos-duration="2000">
+        <div class="about-img">
+            <img src="1721970394766.png" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">ABOUT <span>Me</span></h2>
+            <h3>Frontend Developer</h3>
+            <p>Hi, I'm Naseer Shaik, a recent B.Tech graduate in Computer Science Engineering. With expertise in HTML,
+                CSS, JavaScript, and Java, I enjoy crafting interactive and dynamic web experiences. Problem-solving,
+                leadership, and creativity are key aspects of my skill set. I love to continuously learn and stay
+                updated with the latest tech trends, aiming to enhance my skills as a frontend developer and make a
+                positive impact in the tech world. I'm excited about new opportunities and ready to take on fresh
+                challenges with enthusiasm and a creative mindset!.</p>
+            <a href="#" class="btn">Read more...</a>
+        </div>
+    </section>
+
+    <section class="projects" id="projects" data-aos="fade-right" data-aos-duration="2000">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="wrapper">
+            <div class="card">
+                <img src="p1.jpg" alt="">
+                <div class="info">
+                    <h1>Weather-App</h1>
+                    <p>Get real-time weather updates with a sleek, user-friendly design.</p>
+                    <a href="https://naseerbaba10.github.io/Wwather-App/" class="btn">Read more</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="p2.jpg" alt="">
+                <div class="info">
+                    <h1>Currency Converter</h1>
+                    <p>Easily convert currencies with real-time exchange rates.</p>
+                    <a href="https://naseerbaba10.github.io/Currency-Exchange/" class="btn">Read more</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="p3.jpg" alt="">
+                <div class="info">
+                    <h1>Rock Paper Scissors Game</h1>
+                    <p>Play the classic Rock Paper Scissors game with a modern twist.</p>
+                    <a href="https://naseerbaba10.github.io/game/" class="btn">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact" data-aos="fade-up" data-aos-duration="3000">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" name="name" id="name">
+                <input type="email" placeholder="Email Address" id="email">
+            </div>
+            <textarea cols="30" rows="10" placeholder="Your Message" id="message"></textarea>
+            <button type="submit" onclick="sendMail()" value="Send Message" class="btn">Submit</button>
+        </form>
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy; 2024 by @naseerbabashaik | All Rights Reserved</p>
+            </div>
+            <div class="footer-iconTop">
+                <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+            </div>
+        </footer>
+    </section>
+
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("4ATYzs3_K5sJLeprS");
+        })();
+
+        function sendMail() {
+            var params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            };
+
+            const serviceID = "service_xyzfq8s";
+            const templateID = "template_eldjdpi";
+
+            emailjs.send(serviceID, templateID, params)
+                .then(res => {
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("message").value = "";
+                    console.log(res);
+                    alert("Your message was sent SUCCESSFULLY");
+                })
+                .catch(err => console.log(err));
+        }
+    </script>
+    <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+</body>
+
+</html>
