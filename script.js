@@ -12,7 +12,7 @@ function showSideBar(){
 }
 
     var typed = new Typed(".auto-type", {
-        strings: ["Frontend Developer", "Programmer", "Designer"],
+        strings: ["FullStack Developer", "Programmer", "Designer"],
         typeSpeed: 100,    
         backSpeed: 50,   
         loop: true
